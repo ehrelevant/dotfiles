@@ -1,0 +1,102 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace || Editor",
+    "bindings": {
+      // Window navigation (Focusing splits)
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    }
+  },
+  {
+    "context": "(Dock && !Terminal) || VimControl || MarkdownPreview",
+    "bindings": {
+      // Buffer / Tab navigation
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePreviousItem",
+      "[ b": "pane::ActivatePreviousItem",
+      "] b": "pane::ActivateNextItem",
+      "space b d": "pane::CloseActiveItem",
+
+      // Toggle File Explorer
+      "space e": "project_panel::Toggle",
+      "space g": "git_panel::Toggle",
+
+      // Toggle terminal
+      "ctrl-/": "workspace::ToggleBottomDock",
+
+      // Telescope-like search
+      "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      // Close terminal
+      "ctrl-/": "workspace::ToggleBottomDock",
+    },
+  },
+  {
+    "context": "Editor && VimControl",
+    "bindings": {
+      // Line movement
+      "alt-up": "editor::MoveLineUp",
+      "alt-down": "editor::MoveLineDown",
+
+      // Line duplication
+      "shift-up": "editor::DuplicateLineUp",
+      "shift-down": "editor::DuplicateLineDown",
+
+      // Remap U to Redo
+      "U": "vim::Redo",
+
+      // Line insertion actions
+      "space o": "vim::InsertEmptyLineBelow",
+      "space O": "vim::InsertEmptyLineAbove",
+      "space enter": "editor::NewlineBelow",
+
+      // Outlines
+      "space s b": "outline::Toggle",                  // Buffer outline / symbols
+      "space s S": "project_symbols::Toggle",          // Workspace LSP Symbols
+
+      "space s c": "command_palette::Toggle",          // Command Palette
+      "space s d": "diagnostics::Deploy",              // Project Diagnostics
+      "space s D": "editor::ToggleDiagnostics",        // Buffer Diagnostics / inline toggle
+
+      // Editor Goto
+      "g d": "editor::GoToDefinition",                 // Goto Definition
+      "g D": "editor::GoToDeclaration",                // Goto Declaration
+      "g r": "editor::FindAllReferences",              // Find References
+      "g I": "editor::GoToImplementation",             // Goto Implementation
+      "g y": "editor::GoToTypeDefinition",             // Goto Type Definition
+
+      // Select next/previous
+      "] ]": "editor::SelectNext",                     // Next occurrence / reference
+      "[ [" : "editor::SelectPrevious",                // Prev occurrence / reference
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore"
+    }
+  },
+  // (d)elete/(c)hange register modifications
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "d": ["workspace::SendKeystrokes", "\" _ d"],
+      "c": ["workspace::SendKeystrokes", "\" _ c"],
+      "x": ["workspace::SendKeystrokes", "\" _ x"],
+    }
+  },
+]

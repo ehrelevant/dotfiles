@@ -1,0 +1,129 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "relative_line_numbers": "enabled",
+  "disable_ai": false,
+  "calls": {
+    "share_on_join": true,
+    "mute_on_join": true
+  },
+  "git": {
+    "blame": {
+      "show_avatar": true
+    },
+    "inline_blame": {
+      "show_commit_summary": true
+    }
+  },
+  "git_panel": {
+    "show_count_badge": true,
+    "folder_icons": true,
+    "file_icons": true,
+    "group_by": "staging",
+    "tree_view": true,
+    "fallback_branch_name": "main",
+    "dock": "left"
+  },
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "show_count_badge": false
+  },
+  "project_panel": {
+    "hide_root": false,
+    "git_status_indicator": true,
+    "diagnostic_badges": true,
+    "dock": "left"
+  },
+  "bottom_dock_layout": "contained",
+  "tabs": {
+    "show_diagnostics": "errors",
+    "git_status": true,
+    "file_icons": true
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_branch_status_icon": false
+  },
+  "status_bar": {
+    "show_active_file": false
+  },
+  "code_lens": "off",
+  "inlay_hints": {
+    "enabled": true
+  },
+  "completion_menu_item_kind": "symbol",
+  "ensure_final_newline_on_save": false,
+  "minimap": {
+    "show": "auto",
+    "display_in": "all_editors"
+  },
+  "remove_trailing_whitespace_on_save": false,
+  "agent": {
+    "dock": "right",
+    "default_model": {
+      "provider": "opencode",
+      "model": "free/big-pickle",
+      "enable_thinking": false
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "language_models": {
+    "opencode": {
+      "show_zen_models": false
+    }
+  },
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "cli_default_open_behavior": "new_window",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "proxy": "",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "vim_mode": true,
+  "icon_theme": "Catppuccin Mocha",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha - No Italics",
+  },
+  "languages": {
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "!solargraph", "!rubocop", "..."]
+    },
+    // Enable herb and ruby-lsp for *.html.erb files
+    "HTML+ERB": {
+      "language_servers": ["herb", "ruby-lsp", "..."]
+    },
+    // Enable ruby-lsp for *.js.erb files
+    "JS+ERB": {
+      "language_servers": ["ruby-lsp", "..."]
+    },
+    // Enable ruby-lsp for *.yaml.erb files
+    "YAML+ERB": {
+      "language_servers": ["ruby-lsp", "..."]
+    }
+  },
+  "lsp": {
+    "ruby-lsp": {
+      // Use global ruby-lsp shim
+      "binary": {
+        "path": "/Users/ehren/.rbenv/shims/ruby-lsp"
+      }
+    }
+  }
+}
