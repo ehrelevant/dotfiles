@@ -1,30 +1,30 @@
 [submodule "tmux/plugins/tmux-catppuccin"]
-	path = tmux/plugins/tmux-catppuccin
+	path = .config/tmux/plugins/tmux-catppuccin
 	url = git@github.com:catppuccin/tmux.git
 [submodule "tmux/plugins/tmux-battery"]
-	path = tmux/plugins/tmux-battery
+	path = .config/tmux/plugins/tmux-battery
 	url = git@github.com:tmux-plugins/tmux-battery.git
 [submodule "tmux/plugins/tmux-continuum"]
-	path = tmux/plugins/tmux-continuum
+	path = .config/tmux/plugins/tmux-continuum
 	url = git@github.com:tmux-plugins/tmux-continuum.git
 [submodule "tmux/plugins/tmux-cpu"]
-	path = tmux/plugins/tmux-cpu
+	path = .config/tmux/plugins/tmux-cpu
 	url = git@github.com:tmux-plugins/tmux-cpu.git
 [submodule "tmux/plugins/tmux-fzf"]
-	path = tmux/plugins/tmux-fzf
+	path = .config/tmux/plugins/tmux-fzf
 	url = git@github.com:sainnhe/tmux-fzf.git
 [submodule "tmux/plugins/tmux-resurrect"]
-	path = tmux/plugins/tmux-resurrect
+	path = .config/tmux/plugins/tmux-resurrect
 	url = git@github.com:tmux-plugins/tmux-resurrect.git
 [submodule "tmux/plugins/tmux-sensible"]
-	path = tmux/plugins/tmux-sensible
+	path = .config/tmux/plugins/tmux-sensible
 	url = git@github.com:tmux-plugins/tmux-sensible.git
 [submodule "tmux/plugins/tmux-which-key"]
-	path = tmux/plugins/tmux-which-key
+	path = .config/tmux/plugins/tmux-which-key
 	url = git@github.com:alexwforsythe/tmux-which-key.git
 [submodule "tmux/plugins/tmux-yank"]
-	path = tmux/plugins/tmux-yank
+	path = .config/tmux/plugins/tmux-yank
 	url = git@github.com:tmux-plugins/tmux-yank.git
 [submodule "tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
+	path = .config/tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
