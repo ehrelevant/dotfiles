@@ -38,11 +38,7 @@ eval "$(starship init zsh)"
 # Enable zsh auto-suggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Disables underline due to zsh syntax highlighting
-(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[path]=none
-ZSH_HIGHLIGHT_STYLES[path_prefix]=none
-
-# Enable zsh syntax highlighting
+# Enable zsh-patina (syntax highlighting)
+# The zsh-patina package must be installed via cargo for this to work
 # IMPORTANT: MUST BE AT THE END OF CONFIG
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(~/.cargo/bin/zsh-patina activate)"
