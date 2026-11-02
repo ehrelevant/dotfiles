@@ -35,10 +35,27 @@ eval "$(starship init zsh)"
 # =====================================================
 # Plugin Configuration
 # =====================================================
-# Enable zsh auto-suggestions
+# Enable fzf-tab
+# Requires fzf to be installed
+# Should be before zsh-autosuggestions and zsh-patina
+autoload -U compinit; compinit
+source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
+
+# Enable zsh-history-substring-search
+source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# Enable zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Enable zsh-patina (syntax highlighting)
-# The zsh-patina package must be installed via cargo for this to work
-# IMPORTANT: MUST BE AT THE END OF CONFIG
+# Enable zsh-histdb
+# Requires sqlite3 package to be installed via OS package manager
+source ~/.zsh/zsh-histdb/sqlite-history.zsh
+
+# Enable zsh-patina (syntax-highlighting)
+# The zsh-patina package must be installed via cargo
 eval "$(~/.cargo/bin/zsh-patina activate)"
+
+# Enables zoxide
+# Must be after compinit
+# The zoxide package must be installed via cargo
+eval "$(zoxide init zsh)"
