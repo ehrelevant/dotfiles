@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "restore_on_startup": "last_workspace",
   "relative_line_numbers": "enabled",
   "disable_ai": false,
   "calls": {
@@ -101,6 +102,11 @@
     "light": "One Light",
     "dark": "Catppuccin Mocha - No Italics",
   },
+  "file_types": {
+    "SQL": [
+      "*.sql.erb"
+    ]
+  },
   "languages": {
     "Ruby": {
       "language_servers": ["ruby-lsp", "!solargraph", "!rubocop", "..."]
@@ -115,7 +121,10 @@
     },
     // Enable ruby-lsp for *.yaml.erb files
     "YAML+ERB": {
-      "language_servers": ["ruby-lsp", "..."]
+      "language_servers": ["ruby-lsp", "..."],
+    },
+    "SQL": {
+      "tab_size": 2,
     }
   },
   "lsp": {
